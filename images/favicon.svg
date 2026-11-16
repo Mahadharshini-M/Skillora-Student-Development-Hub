@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <linearGradient id="purpleFavicon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+  </defs>
+  <!-- Squircle container -->
+  <rect width="32" height="32" rx="8" fill="url(#purpleFavicon)"/>
+  <!-- Infinity symbol -->
+  <path d="M16 16.5C13 13,7 11,5 15C3 19,5 22.5,8 23.5C11 24.5,15 21.5,16 18.5C17 15.5,21 12.5,24 13.5C27 14.5,27 18.5,24 20.5C21 22.5,17 20.5,16 18.5" stroke="white" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+  <path d="M16 16.5C19 13,25 11,27 15C29 19,27 22.5,24 23.5C21 24.5,17 21.5,16 18.5C15 15.5,11 12.5,8 13.5C5 14.5,5 18.5,8 20.5C11 22.5,15 20.5,16 18.5" stroke="rgba(255,255,255,0.6)" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+  <!-- Upward arrow -->
+  <path d="M24 7L27 4M27 4 L24 4 M27 4 L27 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Graduation cap -->
+  <polygon points="16,3 20,5.5 16,8 12,5.5" fill="white" opacity="0.95"/>
+</svg>

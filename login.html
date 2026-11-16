@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Log in to Skillora — Your student skill development platform.">
+  <title>Log in | Skillora</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/skillora.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="js/app.js" defer></script>
+</head>
+<body class="page-login">
+
+<div class="skl-auth-page">
+
+  <!-- LEFT PANEL -->
+  <div class="skl-auth-left">
+    <div class="skl-auth-left-logo">
+      <img src="images/skillora-icon.svg" alt="Skillora" style="width:38px;height:38px;">
+      <span class="skl-wordmark" style="color:var(--skl-dark);-webkit-text-fill-color:var(--skl-dark);font-size:1.4rem;">Skillora</span>
+    </div>
+    <h2>Welcome back! 👋<br>Ready to continue learning?</h2>
+    <p>Log back in to track your skills, manage your projects and keep your learning momentum going.</p>
+    <ul class="skl-auth-features">
+      <li>Track skills across 8+ categories</li>
+      <li>Manage projects & certificates</li>
+      <li>Complete weekly learning missions</li>
+      <li>Build your student portfolio</li>
+    </ul>
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="skl-auth-right">
+    <div class="skl-auth-form-wrap">
+      <div style="margin-bottom:28px">
+        <p class="ss-eyebrow" style="margin:0 0 6px">Welcome back</p>
+        <h1>Log in to Skillora</h1>
+        <p>Continue tracking your learning progress.</p>
+      </div>
+
+      <form class="ss-form" id="loginForm" style="display:flex;flex-direction:column;gap:16px;">
+        <div class="ss-field">
+          <label for="loginEmail">Email address</label>
+          <input id="loginEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+        </div>
+        <div class="ss-field">
+          <label for="loginPassword">Password</label>
+          <div class="skl-pw-wrap">
+            <input id="loginPassword" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required minlength="6">
+            <button type="button" class="skl-pw-toggle" id="loginPwToggle" aria-label="Show password">👁</button>
+          </div>
+        </div>
+        <p class="ss-form-message" id="loginMessage" aria-live="polite"></p>
+        <button class="ss-btn" type="submit" style="width:100%;justify-content:center;padding:13px;">Log in →</button>
+      </form>
+
+      <p class="ss-auth-foot">New here? <a href="register.html">Create an account</a></p>
+    </div>
+  </div>
+
+</div>
+
+<div class="ss-toast" id="ssToast" role="status" aria-live="polite"></div>
+</body>
+</html>

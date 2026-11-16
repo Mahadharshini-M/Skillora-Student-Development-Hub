@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile | Skillora</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/skillora.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="js/app.js" defer></script>
+</head>
+<body class="ss-page page-profile">
+
+<header class="ss-header">
+  <div class="ss-container ss-header-inner">
+    <a class="skl-logo-wrap" href="index.html">
+      <img class="skl-logo-icon" src="images/skillora-icon.svg" alt="Skillora logo">
+      <span class="skl-wordmark">Skillora</span>
+    </a>
+    <nav class="ss-nav" id="mainNav" aria-label="Main navigation">
+      <a href="index.html" data-nav="index">Home</a>
+      <a href="dashboard.html" data-nav="dashboard">Dashboard</a>
+      <a href="profile.html" data-nav="profile">My Profile</a>
+      <a href="skills.html" data-nav="skills">My Skills</a>
+      <a href="projects.html" data-nav="projects">My Projects</a>
+      <a href="certificates.html" data-nav="certificates">Certificates</a>
+      <a href="achievements.html" data-nav="achievements">Achievements</a>
+      <a href="students.html" data-nav="students">Directory</a>
+      <a href="login.html" data-auth-link="login">Log in</a>
+      <a href="register.html" data-auth-link="register">Sign up</a>
+      <a href="#" data-logout hidden>Log out</a>
+    </nav>
+    <button class="skl-hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main class="ss-main"><div class="ss-container" style="max-width:800px">
+  <div class="ss-page-head">
+    <div>
+      <p class="ss-eyebrow">Your information</p>
+      <h1 class="ss-title">My Profile</h1>
+      <p class="ss-subtitle">Keep your student details up to date.</p>
+    </div>
+    <a class="ss-btn secondary" href="dashboard.html">← Dashboard</a>
+  </div>
+
+  <section class="ss-card">
+    <div class="ss-profile-top">
+      <div class="ss-profile-avatar" id="profileAvatar">S</div>
+      <div>
+        <h2 id="profileHeading" style="margin:0;color:var(--skl-dark)">Student profile</h2>
+        <p id="profileEmailText" class="ss-subtitle" style="margin-top:5px">Update your details below.</p>
+      </div>
+    </div>
+
+    <form id="profileForm" class="ss-form" style="display:flex;flex-direction:column;gap:14px">
+      <div class="ss-field">
+        <label for="profileName">Full name</label>
+        <input id="profileName" name="name" maxlength="80" required>
+      </div>
+      <div class="ss-field">
+        <label for="profileEmail">Email address</label>
+        <input id="profileEmail" name="email" type="email" required>
+      </div>
+      <div class="ss-field">
+        <label for="profileDepartment">Course / Department</label>
+        <input id="profileDepartment" name="department" maxlength="100" placeholder="e.g. Computer Science">
+      </div>
+      <div class="ss-field">
+        <label for="profileBio">About me (optional)</label>
+        <textarea id="profileBio" name="bio" rows="3" maxlength="300" placeholder="A short introduction about your learning goals"></textarea>
+      </div>
+      <p class="ss-form-message" id="profileMessage" aria-live="polite"></p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="ss-btn" type="submit">Save profile</button>
+        <a class="ss-btn secondary" href="resume.html">📄 Manage Resume</a>
+      </div>
+    </form>
+  </section>
+
+  <!-- RESUME STATUS -->
+  <section class="ss-card" style="margin-top:20px">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <div>
+        <p class="ss-eyebrow">Resume</p>
+        <h2 style="margin:0;font-size:1.1rem;color:var(--skl-dark)" id="resumeStatusHeading">No resume uploaded</h2>
+        <p class="ss-subtitle" id="resumeStatusText">Your resume stays private in this browser and is not shown on your public profile.</p>
+      </div>
+      <a class="ss-btn secondary small" href="resume.html" id="resumeActionBtn">Upload Resume →</a>
+    </div>
+  </section>
+
+</div></main>
+
+<div class="ss-toast" id="ssToast" role="status" aria-live="polite"></div>
+</body>
+</html>

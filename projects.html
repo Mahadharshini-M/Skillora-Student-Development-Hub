@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Projects | Skillora</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/skillora.css">
+  <script src="js/app.js" defer></script>
+</head>
+
+<body class="dashboard-page page-projects">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="dashboard-logo">
+      <div class="logo-icon">
+        <img src="images/skillora-icon.svg" alt="Skillora">
+      </div>
+      <div>
+        <h2>Skillora</h2>
+        <span>Student Platform</span>
+      </div>
+    </div>
+
+    <div class="sidebar-profile">
+      <div class="sidebar-avatar" id="sidebarAvatar">ST</div>
+      <div>
+        <strong id="sidebarName">Student</strong>
+        <span id="sidebarDept">Student</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <p class="nav-title">MAIN MENU</p>
+      <a href="dashboard.html" class="sidebar-link"><span>⌂</span> Dashboard</a>
+      <a href="profile.html" class="sidebar-link"><span>◉</span> My Profile</a>
+      <a href="skills.html" class="sidebar-link"><span>✦</span> My Skills</a>
+      <a href="projects.html" class="sidebar-link active"><span>▣</span> My Projects</a>
+      <a href="certificates.html" class="sidebar-link"><span>▤</span> Certificates</a>
+      <a href="achievements.html" class="sidebar-link"><span>★</span> Achievements</a>
+      <a href="resume.html" class="sidebar-link"><span>📄</span> Resume</a>
+
+      <p class="nav-title">EXPLORE</p>
+      <a href="students.html" class="sidebar-link"><span>♙</span> Student Directory</a>
+      <a href="public-profile.html" class="sidebar-link"><span>◈</span> Public Profile</a>
+      <a href="index.html" class="sidebar-link"><span>⌂</span> Home</a>
+
+      <p class="nav-title">ACCOUNT</p>
+      <a href="#" class="sidebar-link logout-link" data-logout><span>⏻</span> Log out</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="dashboard-layout">
+    <header class="dashboard-topbar">
+      <h1>My Projects</h1>
+      <div class="topbar-right" style="display:flex;align-items:center;gap:14px">
+        <button class="ss-btn small" id="addProjectBtn">＋ Add Project</button>
+        <div class="topbar-avatar" id="topbarAvatar">ST</div>
+      </div>
+    </header>
+
+    <main class="dashboard-main" style="padding:28px">
+
+      <!-- FILTERS -->
+      <div class="skl-filters">
+        <button class="skl-filter-btn active" data-project-filter="all">All</button>
+        <button class="skl-filter-btn" data-project-filter="completed">Completed</button>
+        <button class="skl-filter-btn" data-project-filter="in-progress">In Progress</button>
+        <button class="skl-filter-btn" data-project-filter="planned">Planned</button>
+      </div>
+
+      <!-- PROJECTS GRID -->
+      <div class="skl-projects-grid" id="projectsGrid"></div>
+
+      <!-- EMPTY STATE -->
+      <div class="ss-empty" id="projectsEmpty" style="display:none">
+        <div style="font-size:3rem;margin-bottom:16px">📋</div>
+        <strong>No projects yet</strong>
+        Start adding your work — assignments, personal builds, hackathon submissions — anything you've created.
+        <p style="margin-top:16px"><button class="ss-btn" onclick="document.getElementById('addProjectBtn').click()">＋ Add Your First Project</button></p>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ADD / EDIT PROJECT MODAL -->
+  <div class="skl-modal-overlay" id="projectModal" style="display:none" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
+    <div class="skl-modal">
+      <div class="skl-modal-header">
+        <h3 id="projectModalTitle">Add Project</h3>
+        <button class="skl-modal-close" id="projectModalClose" aria-label="Close">✕</button>
+      </div>
+      <div class="skl-modal-body">
+        <input type="hidden" id="projectEditId">
+        <div class="ss-field">
+          <label for="projectTitle">Project title *</label>
+          <input id="projectTitle" placeholder="e.g. E-Commerce Website" maxlength="100" required>
+        </div>
+        <div class="ss-field">
+          <label for="projectDesc">Description</label>
+          <textarea id="projectDesc" rows="3" maxlength="400" placeholder="Brief description of what this project does"></textarea>
+        </div>
+        <div class="ss-field">
+          <label for="projectTech">Technologies (comma separated)</label>
+          <input id="projectTech" placeholder="e.g. HTML, CSS, JavaScript, React">
+        </div>
+        <div class="ss-field">
+          <label for="projectStatus">Status</label>
+          <select id="projectStatus">
+            <option value="Completed">Completed</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Planned">Planned</option>
+          </select>
+        </div>
+        <div class="ss-field">
+          <label for="projectLink">Project link (optional)</label>
+          <input id="projectLink" type="url" placeholder="https://github.com/...">
+        </div>
+        <p class="ss-form-message" id="projectFormMsg" aria-live="polite"></p>
+        <div style="display:flex;gap:10px">
+          <button class="ss-btn" id="projectSaveBtn" style="flex:1;justify-content:center">Save Project</button>
+          <button class="ss-btn secondary" id="projectCancelBtn">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONFIRM DELETE MODAL -->
+  <div class="skl-modal-overlay" id="deleteProjectModal" style="display:none" role="dialog" aria-modal="true">
+    <div class="skl-modal" style="max-width:400px">
+      <div class="skl-modal-header">
+        <h3>Delete Project</h3>
+        <button class="skl-modal-close" id="deleteProjectClose" aria-label="Close">✕</button>
+      </div>
+      <div class="skl-modal-body" style="text-align:center">
+        <div style="font-size:2.5rem;margin-bottom:12px">🗑️</div>
+        <p style="color:var(--skl-muted);font-size:0.95rem">Are you sure you want to delete <strong id="deleteProjectName"></strong>? This cannot be undone.</p>
+        <input type="hidden" id="deleteProjectId">
+        <div style="display:flex;gap:10px;margin-top:20px">
+          <button class="ss-btn danger" id="deleteProjectConfirm" style="flex:1;justify-content:center">Yes, delete</button>
+          <button class="ss-btn secondary" id="deleteProjectCancel" style="flex:1;justify-content:center">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ss-toast" id="ssToast" role="status" aria-live="polite"></div>
+</body>
+</html>

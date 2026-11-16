@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Public Profile | Skillora</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/skillora.css">
+  <script src="js/app.js" defer></script>
+</head>
+
+<body class="dashboard-page page-public-profile">
+<div class="dashboard-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="dashboard-logo">
+      <div class="logo-icon"><img src="images/skillora-icon.svg" alt="Skillora"></div>
+      <div>
+        <h2>Skillora</h2>
+        <span>Student Platform</span>
+      </div>
+    </div>
+
+    <div class="sidebar-profile">
+      <div class="sidebar-avatar" id="sidebarAvatar">ST</div>
+      <div>
+        <strong id="sidebarName">Student</strong>
+        <span id="sidebarDept">Student</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <p class="nav-title">MAIN MENU</p>
+      <a href="dashboard.html" class="sidebar-link"><span>⌂</span> Dashboard</a>
+      <a href="profile.html" class="sidebar-link"><span>◉</span> My Profile</a>
+      <a href="skills.html" class="sidebar-link"><span>✦</span> My Skills</a>
+      <a href="projects.html" class="sidebar-link"><span>▣</span> My Projects</a>
+      <a href="certificates.html" class="sidebar-link"><span>▤</span> Certificates</a>
+      <a href="achievements.html" class="sidebar-link"><span>★</span> Achievements</a>
+      <a href="resume.html" class="sidebar-link"><span>📄</span> Resume</a>
+
+      <p class="nav-title">EXPLORE</p>
+      <a href="students.html" class="sidebar-link"><span>👥</span> Student Directory</a>
+      <a href="public-profile.html" class="sidebar-link active"><span>↗</span> Public Profile</a>
+      <a href="index.html" class="sidebar-link"><span>⌂</span> Home</a>
+
+      <p class="nav-title">ACCOUNT</p>
+      <a href="#" class="sidebar-link logout-link" data-logout><span>⏻</span> Log out</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="dashboard-main">
+
+    <!-- TOPBAR -->
+    <header class="dashboard-topbar">
+      <div>
+        <span class="welcome-small">PUBLIC PROFILE</span>
+        <h1 id="publicTopbarName">Student</h1>
+      </div>
+      <div class="topbar-actions">
+        <a href="students.html" class="view-profile-btn">← Student Directory</a>
+        <div class="topbar-avatar" id="topbarAvatar">ST</div>
+      </div>
+    </header>
+
+    <!-- PROFILE COVER -->
+    <section class="public-profile-cover">
+      <div class="profile-cover-pattern"></div>
+      <div class="public-profile-main">
+
+        <div class="public-avatar" id="publicAvatar">
+          ST
+          <span class="profile-verified">✓</span>
+        </div>
+
+        <div class="public-profile-info">
+          <div class="public-name-row">
+            <h2 id="publicName">Student</h2>
+            <span class="verified-label">✓ Verified Student</span>
+          </div>
+          <p class="public-role" id="publicRole">Student</p>
+          <p class="public-college" id="publicCollege">🎓 Skillora Member</p>
+          <div class="public-profile-tags" id="publicTags">
+            <span>Skillora Member</span>
+            <span>Open to Opportunities</span>
+          </div>
+        </div>
+
+        <div class="profile-actions">
+          <a href="mailto:student@example.com" class="profile-action-primary">✉ Contact</a>
+          <a href="#" class="profile-action-secondary">↗ Share</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROFILE STATS -->
+    <section class="public-profile-stats">
+      <div class="public-stat"><strong id="statProjects">00</strong><span>Projects</span></div>
+      <div class="public-stat"><strong id="statSkillsCount">00</strong><span>Skills</span></div>
+      <div class="public-stat"><strong id="statCerts">00</strong><span>Certificates</span></div>
+      <div class="public-stat"><strong id="statAchievements">00</strong><span>Achievements</span></div>
+      <div class="public-stat"><strong>Active</strong><span>Status</span></div>
+    </section>
+
+    <!-- TWO COLUMN LAYOUT -->
+    <div class="public-profile-layout">
+
+      <!-- LEFT -->
+      <div class="public-profile-left">
+
+        <!-- ABOUT -->
+        <section class="public-section">
+          <div class="public-section-heading">
+            <div>
+              <span>INTRODUCTION</span>
+              <h2>About Me</h2>
+            </div>
+          </div>
+          <p class="about-profile-text" id="publicBio">
+            A passionate student focused on learning, building projects and growing skills through continuous practice.
+          </p>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="public-section">
+          <div class="public-section-heading">
+            <div>
+              <span>TECHNICAL EXPERTISE</span>
+              <h2>Skills</h2>
+            </div>
+            <a href="skills.html">View all →</a>
+          </div>
+          <div class="public-skill-list" id="publicSkillList">
+            <div class="ss-empty"><strong>No skills added yet.</strong></div>
+          </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="public-section">
+          <div class="public-section-heading">
+            <div>
+              <span>SELECTED WORK</span>
+              <h2>Featured Projects</h2>
+            </div>
+            <a href="projects.html">View all →</a>
+          </div>
+          <div class="public-project-grid" id="publicProjectList">
+            <div class="ss-empty"><strong>No projects added yet.</strong></div>
+          </div>
+        </section>
+
+        <!-- CERTIFICATES -->
+        <section class="public-section">
+          <div class="public-section-heading">
+            <div>
+              <span>VERIFIED CREDENTIALS</span>
+              <h2>Certificates</h2>
+            </div>
+            <a href="certificates.html">View all →</a>
+          </div>
+          <div class="public-certificate-list" id="publicCertList">
+            <div class="ss-empty"><strong>No certificates added yet.</strong></div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- RIGHT -->
+      <aside class="public-profile-right">
+
+        <section class="profile-side-card">
+          <span class="side-card-label">CAREER INTERESTS</span>
+          <h3>Areas I'm Exploring</h3>
+          <div class="interest-list">
+            <span>Full Stack Development</span>
+            <span>Artificial Intelligence</span>
+            <span>Data Analytics</span>
+            <span>Cloud Computing</span>
+            <span>Cybersecurity</span>
+          </div>
+        </section>
+
+        <section class="profile-side-card">
+          <span class="side-card-label">RECENT ACHIEVEMENTS</span>
+          <h3>Achievements</h3>
+          <div id="publicAchievementList">
+            <p style="color:var(--skl-muted);font-size:0.85rem">No achievements added yet.</p>
+          </div>
+        </section>
+
+        <section class="profile-connect-card">
+          <div class="connect-icon">✦</div>
+          <h3>Let's Connect</h3>
+          <p>Interested in collaborating, sharing ideas or discussing opportunities?</p>
+          <div class="social-links">
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="mailto:student@example.com">Email</a>
+          </div>
+        </section>
+
+      </aside>
+    </div>
+
+    <!-- PROFILE FOOTER -->
+    <section class="public-profile-footer">
+      <div>
+        <strong id="publicFooterName">Student</strong>
+        <span id="publicFooterRole">Skillora Member</span>
+      </div>
+      <div class="footer-profile-links">
+        <a href="certificates.html">Certificates</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="projects.html">Projects</a>
+      </div>
+    </section>
+
+    <footer class="dashboard-footer">
+      <p>© 2026 Skillora · Student Skill &amp; Achievement Hub</p>
+      <span>Built for students, by students.</span>
+    </footer>
+
+  </main>
+</div>
+
+<div class="ss-toast" id="ssToast" role="status" aria-live="polite"></div>
+</body>
+</html>

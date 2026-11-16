@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Skillora — The student skill development platform. Track skills, earn certificates, manage projects and build your career profile.">
+  <title>Skillora | Learn • Practice • Grow</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/skillora.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="js/app.js" defer></script>
+</head>
+<body class="ss-page page-home">
+
+<!-- ═══════════════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════════════════ -->
+<header class="ss-header">
+  <div class="ss-container ss-header-inner">
+    <a class="skl-logo-wrap" href="index.html">
+      <img class="skl-logo-icon" src="images/skillora-icon.svg" alt="Skillora logo">
+      <span class="skl-wordmark">Skillora</span>
+    </a>
+
+    <nav class="ss-nav" id="mainNav" aria-label="Main navigation">
+      <a href="index.html" data-nav="index">Home</a>
+      <a href="dashboard.html" data-nav="dashboard">Dashboard</a>
+      <a href="profile.html" data-nav="profile">My Profile</a>
+      <a href="skills.html" data-nav="skills">My Skills</a>
+      <a href="projects.html" data-nav="projects">My Projects</a>
+      <a href="certificates.html" data-nav="certificates">Certificates</a>
+      <a href="achievements.html" data-nav="achievements">Achievements</a>
+      <a href="students.html" data-nav="students">Directory</a>
+      <a href="login.html" data-auth-link="login">Log in</a>
+      <a href="register.html" data-auth-link="register">Sign up</a>
+      <a href="#" data-logout hidden>Log out</a>
+    </nav>
+
+    <button class="skl-hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════ -->
+<section class="skl-hero">
+  <div class="skl-hero-shapes">
+    <span></span><span></span><span></span>
+  </div>
+  <div class="skl-hero-inner">
+    <div class="skl-hero-text">
+      <div class="skl-hero-eyebrow">✦ Student Skill Development Platform</div>
+      <h1>Discover Your Skills.<br>Build Your Future.</h1>
+      <p>Skillora is the all-in-one platform for students to track skills, manage projects, earn certificates and showcase achievements — all in one place.</p>
+      <div class="skl-hero-cta">
+        <a class="skl-btn-white" href="register.html">Get Started Free →</a>
+        <a class="skl-btn-outline-white" href="students.html">Explore Students</a>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     STATS BANNER
+════════════════════════════════════════════════════════ -->
+<div class="skl-stats-banner">
+  <div class="skl-stats-inner">
+    <div class="skl-stat-item"><strong>500+</strong><span>Students Registered</span></div>
+    <div class="skl-stat-item"><strong>3,200+</strong><span>Skills Tracked</span></div>
+    <div class="skl-stat-item"><strong>1,800+</strong><span>Projects Created</span></div>
+    <div class="skl-stat-item"><strong>95%</strong><span>Goal Completion Rate</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     FEATURES
+════════════════════════════════════════════════════════ -->
+<section class="skl-section">
+  <div class="skl-section-inner">
+    <div class="skl-section-label">Platform Features</div>
+    <h2 class="skl-section-title">Everything you need to grow</h2>
+    <p class="skl-section-sub">From skill tracking to certificate management — Skillora gives you all the tools to build a standout student profile.</p>
+
+    <div class="skl-feature-grid">
+      <div class="skl-feature-card">
+        <div class="skl-feature-icon">🎯</div>
+        <h3>Skill Tracking</h3>
+        <p>Add and monitor your learning progress across Programming, Web Dev, AI/ML, Cloud, Cybersecurity and more with real-time progress bars.</p>
+      </div>
+      <div class="skl-feature-card">
+        <div class="skl-feature-icon">📋</div>
+        <h3>Project Portfolio</h3>
+        <p>Showcase your projects with descriptions, technologies used and status. Build a compelling portfolio for internships and placements.</p>
+      </div>
+      <div class="skl-feature-card">
+        <div class="skl-feature-icon">🏆</div>
+        <h3>Certificates & Achievements</h3>
+        <p>Store all your certificates — hackathons, courses, events — and log academic and leadership achievements in one place.</p>
+      </div>
+      <div class="skl-feature-card">
+        <div class="skl-feature-icon">📅</div>
+        <h3>Weekly Missions</h3>
+        <p>Break big learning goals into small weekly tasks. Stay consistent, track completion and celebrate your progress every week.</p>
+      </div>
+      <div class="skl-feature-card">
+        <div class="skl-feature-icon">👥</div>
+        <h3>Student Directory</h3>
+        <p>Explore a community of ambitious students. View public profiles, discover skills and get inspired by your peers.</p>
+      </div>
+      <div class="skl-feature-card">
+        <div class="skl-feature-icon">📄</div>
+        <h3>Resume Management</h3>
+        <p>Upload and manage your resume securely. Access, preview and download your latest resume from anywhere, anytime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     HOW IT WORKS
+════════════════════════════════════════════════════════ -->
+<section class="skl-steps">
+  <div class="skl-steps-inner">
+    <div class="skl-section-label">How It Works</div>
+    <h2 class="skl-section-title">Start your journey in minutes</h2>
+
+    <div class="skl-steps-grid">
+      <div class="skl-step">
+        <div class="skl-step-num">1</div>
+        <h3>Create Account</h3>
+        <p>Register with your name, email, and department. No credit card required.</p>
+      </div>
+      <div class="skl-step">
+        <div class="skl-step-num">2</div>
+        <h3>Build Your Profile</h3>
+        <p>Add your skills, projects, certificates and achievements to your profile.</p>
+      </div>
+      <div class="skl-step">
+        <div class="skl-step-num">3</div>
+        <h3>Track Progress</h3>
+        <p>Update skill levels, complete weekly missions and monitor your growth.</p>
+      </div>
+      <div class="skl-step">
+        <div class="skl-step-num">4</div>
+        <h3>Shine in Directory</h3>
+        <p>Get featured in the student directory and share your public profile with recruiters.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     COMMUNITY
+════════════════════════════════════════════════════════ -->
+<section class="skl-community">
+  <div class="skl-section-inner">
+    <div class="skl-section-label">Student Community</div>
+    <h2 class="skl-section-title">Join thousands of ambitious students</h2>
+    <p class="skl-section-sub">Connect with like-minded learners, explore their profiles and get inspired.</p>
+
+    <div class="skl-student-cards">
+      <a class="skl-student-mini" href="public-profile.html?student=ananya-krishnan">
+        <div class="skl-student-mini-avatar">AK</div>
+        <h4>Ananya Krishnan</h4>
+        <p>Computer Science · SRIT</p>
+        <div class="skl-student-mini-skills">
+          <span>Python</span><span>React</span><span>SQL</span>
+        </div>
+      </a>
+      <a class="skl-student-mini" href="public-profile.html?student=priya-sharma">
+        <div class="skl-student-mini-avatar">PS</div>
+        <h4>Priya Sharma</h4>
+        <p>AI & Data Science · PSG</p>
+        <div class="skl-student-mini-skills">
+          <span>Python</span><span>ML</span><span>Data Science</span>
+        </div>
+      </a>
+      <a class="skl-student-mini" href="public-profile.html?student=rahul-kumar">
+        <div class="skl-student-mini-avatar">RK</div>
+        <h4>Rahul Kumar</h4>
+        <p>Full Stack Dev · KCT</p>
+        <div class="skl-student-mini-skills">
+          <span>JavaScript</span><span>Node.js</span><span>MongoDB</span>
+        </div>
+      </a>
+      <a class="skl-student-mini" href="public-profile.html?student=sneha-nair">
+        <div class="skl-student-mini-avatar">SN</div>
+        <h4>Sneha Nair</h4>
+        <p>Cybersecurity · Amrita</p>
+        <div class="skl-student-mini-skills">
+          <span>Cybersecurity</span><span>Python</span><span>Linux</span>
+        </div>
+      </a>
+      <a class="skl-student-mini" href="public-profile.html?student=divya-menon">
+        <div class="skl-student-mini-avatar">DM</div>
+        <h4>Divya Menon</h4>
+        <p>UI/UX Design · PSGR</p>
+        <div class="skl-student-mini-skills">
+          <span>Figma</span><span>HTML</span><span>CSS</span>
+        </div>
+      </a>
+      <a class="skl-student-mini" href="public-profile.html?student=vishnu-s">
+        <div class="skl-student-mini-avatar">VS</div>
+        <h4>Vishnu S</h4>
+        <p>Cloud & Backend · Anna Univ</p>
+        <div class="skl-student-mini-skills">
+          <span>AWS</span><span>Node.js</span><span>Docker</span>
+        </div>
+      </a>
+    </div>
+
+    <div style="text-align:center;margin-top:36px">
+      <a class="ss-btn" href="students.html">View All Students →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     CTA
+════════════════════════════════════════════════════════ -->
+<section class="skl-cta">
+  <div class="skl-section-inner skl-text-center">
+    <div class="skl-section-label" style="color:rgba(255,255,255,0.6)">Ready to begin?</div>
+    <h2>Your next skill starts here.</h2>
+    <p>Join Skillora today — it's free, simple and built for students like you.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a class="skl-btn-white" href="register.html">Create Free Account</a>
+      <a class="skl-btn-outline-white" href="login.html">Log In</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════ -->
+<footer class="skl-footer">
+  <div class="skl-footer-inner">
+    <div class="skl-footer-brand">
+      <div class="skl-wordmark-footer">✦ Skillora</div>
+      <p>The student skill development platform. Track your learning, build your portfolio and showcase your growth.</p>
+      <p style="font-size:0.78rem;opacity:0.6">Learn • Practice • Grow</p>
+    </div>
+    <div class="skl-footer-col">
+      <h4>Platform</h4>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="skills.html">My Skills</a>
+      <a href="projects.html">My Projects</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="achievements.html">Achievements</a>
+    </div>
+    <div class="skl-footer-col">
+      <h4>Community</h4>
+      <a href="students.html">Student Directory</a>
+      <a href="public-profile.html?student=ananya-krishnan">Featured Students</a>
+    </div>
+    <div class="skl-footer-col">
+      <h4>Account</h4>
+      <a href="register.html">Sign Up</a>
+      <a href="login.html">Log In</a>
+      <a href="profile.html">My Profile</a>
+    </div>
+  </div>
+  <div class="skl-footer-bottom">
+    <span>© 2024 Skillora. Built for students, by students.</span>
+    <span>Learn • Practice • Grow</span>
+  </div>
+</footer>
+
+<div class="ss-toast" id="ssToast" role="status" aria-live="polite"></div>
+</body>
+</html>

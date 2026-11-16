@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" fill="none">
+  <defs>
+    <!-- Main vibrant purple-indigo gradient for infinity ribbon -->
+    <linearGradient id="purpleRibbon" x1="15%" y1="85%" x2="90%" y2="20%">
+      <stop offset="0%" stop-color="#4338CA"/>
+      <stop offset="35%" stop-color="#6366F1"/>
+      <stop offset="65%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#9333EA"/>
+    </linearGradient>
+
+    <!-- Top highlight ribbon gradient -->
+    <linearGradient id="purpleHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+
+    <!-- Deep fold gradient for 3D ribbon depth -->
+    <linearGradient id="ribbonShade" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#2E1065"/>
+      <stop offset="100%" stop-color="#4C1D95"/>
+    </linearGradient>
+
+    <!-- Graduation cap dark navy/indigo gradient -->
+    <linearGradient id="capGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B"/>
+      <stop offset="100%" stop-color="#312E81"/>
+    </linearGradient>
+
+    <!-- Arrow head gradient -->
+    <linearGradient id="arrowGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#9333EA"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left loop back fold (for 3D depth) -->
+  <path d="M110 112 C95 86, 60 74, 40 98 C20 122, 22 152, 45 168 C70 184, 105 166, 126 138" 
+        stroke="url(#purpleRibbon)" stroke-width="20" stroke-linecap="round" fill="none"/>
+
+  <!-- Right loop & upward sweep -->
+  <path d="M106 136 C124 162, 160 178, 185 156 C206 138, 202 108, 178 88 C160 72, 142 66, 162 48" 
+        stroke="url(#purpleRibbon)" stroke-width="20" stroke-linecap="round" fill="none"/>
+
+  <!-- Front overlapping ribbon for 3D infinity crossover -->
+  <path d="M126 138 C115 150, 95 165, 75 166 C48 167, 30 148, 32 124 C34 98, 62 86, 88 100 C108 110, 130 130, 150 142" 
+        stroke="url(#purpleHighlight)" stroke-width="17" stroke-linecap="round" fill="none" opacity="0.95"/>
+
+  <!-- Center twist highlight -->
+  <path d="M96 116 C112 102, 136 94, 160 84" 
+        stroke="url(#purpleHighlight)" stroke-width="16" stroke-linecap="round" fill="none"/>
+
+  <!-- Upward Growth Arrow Head -->
+  <polygon points="175,28 198,62 182,59 176,76 164,72 170,55 153,52" 
+           fill="url(#arrowGrad)"/>
+
+  <!-- Graduation Cap on Left Loop -->
+  <!-- Cap skull cap base -->
+  <ellipse cx="80" cy="54" rx="20" ry="10" fill="url(#capGrad)"/>
+  <!-- Mortarboard diamond top -->
+  <polygon points="80,30 114,46 80,62 46,46" fill="url(#capGrad)"/>
+  <polygon points="80,32 110,46 80,59 50,46" fill="#312E81" opacity="0.6"/>
+  <!-- Cap button -->
+  <circle cx="80" cy="46" r="3" fill="#A855F7"/>
+  <!-- Hanging Tassel -->
+  <path d="M80 46 C70 48, 54 54, 52 64 L50 78" stroke="#A855F7" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- Tassel fringe -->
+  <rect x="47" y="78" width="6" height="8" rx="2" fill="#7C3AED"/>
+
+  <!-- Sparkle Star 1 (Top right) -->
+  <path d="M152 32 Q156 32, 156 28 Q156 32, 160 32 Q156 32, 156 36 Q156 32, 152 32 Z" fill="#A855F7"/>
+  <!-- Sparkle Star 2 (Small sparkle) -->
+  <path d="M142 46 Q145 46, 145 43 Q145 46, 148 46 Q145 46, 145 49 Q145 46, 142 46 Z" fill="#C084FC"/>
+</svg>
